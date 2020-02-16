@@ -1,0 +1,34 @@
+    pipeline 
+	{
+	  agent any                                           
+	    {      -- this is not required
+		   stages
+		   {
+		      stage('print hi')
+			  {
+			    steps {
+				       sh 'echo hi'
+				   }
+			   }
+			   stage('print cloning')
+			   {
+			     steps {
+				       sh 'echo cloning'
+					   }
+			    }
+				stage('print testing')
+				{
+				 steps {
+				       sh 'echo testing'
+					   }
+			    }
+				stage('print building')
+				{
+				  steps {
+				       sh 'echo building'
+					   }
+                }					   
+	        }
+	    }
+	
+	}
