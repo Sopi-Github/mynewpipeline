@@ -1,7 +1,6 @@
     pipeline 
 	{
-	  agent any                                           
-	    {      -- this is not required
+	  agent any                                         
 		   stages
 		   {
 		      stage('print hi')
@@ -31,4 +30,4 @@
 	        }
 	    }
 	
-	}
+	
