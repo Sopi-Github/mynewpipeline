@@ -6,7 +6,12 @@ pipeline
                 }
     
 	  stages
-	     {
+	  {
+        stage('Gradle') {
+            steps {
+                sh 'gradle --version'
+            }
+        }
 		   stage ('scm checkout')
 		     {
 			   steps {
