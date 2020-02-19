@@ -1,6 +1,10 @@
 pipeline
     {
 	  agent any
+	      tools {
+        gradle "GRADLE_LATEST"
+                }
+    
 	  stages
 	     {
 		   stage ('scm checkout')
@@ -13,6 +17,7 @@ pipeline
 		   {
 		       steps {
 			        withGradle {
+					sh './gradlew clean'
 					sh './gradlew assemble'
                     sh './gradlew build'
 				}			   
