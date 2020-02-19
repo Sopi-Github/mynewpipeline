@@ -12,7 +12,7 @@ pipeline
 		   stage ('gradle build')
 		   {
 		       steps {
-			        withGradle(jdk: 'localjdk-1.8', gradle: 'localgradle') {
+			        withGradle {
                     sh 'gradle build'
 				}			   
 			   }
