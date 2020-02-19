@@ -2,16 +2,11 @@ pipeline
     {
 	  agent any
 	      tools {
-        jdk 'localjdk-1.8'
+        jdk 'jdk8'
                 }
     
 	  stages
 	  {
-        stage('Gradle') {
-            steps {
-                sh 'gradle --version'
-            }
-        }
 		   stage ('scm checkout')
 		     {
 			   steps {
